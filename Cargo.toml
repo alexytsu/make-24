@@ -3,8 +3,3 @@ name = "make_24"
 version = "0.1.0"
 edition = "2021"
 default-run = "make_24"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
-
-[dependencies]

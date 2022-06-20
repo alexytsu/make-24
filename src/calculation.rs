@@ -77,13 +77,13 @@ pub struct VecDisplay(Vec<i32>);
 // TODO: impl for all inside that impls Display
 impl Display for VecDisplay {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        f.write_str("<");
+        f.write_str("<")?;
         for el in self.0.iter().enumerate() {
             let (index, number) = el;
             if index == self.0.len() - 1 {
                 return f.write_str(format!("{}>", number).as_str());
             }
-            f.write_str(format!("{}, ", number).as_str());
+            f.write_str(format!("{}, ", number).as_str())?;
         }
 
         Err(std::fmt::Error)

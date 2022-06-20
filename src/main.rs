@@ -1,11 +1,10 @@
 use make_24::calculation;
-use make_24::calculation::{Calculation, Operator};
+use make_24::calculation::Calculation;
 use std::io::{self, Write};
-use std::thread::panicking;
 
 #[derive(Debug)]
 enum ParseInputError {
-    InvalidInput,
+    _InvalidInput,
     IoError(io::Error),
 }
 
